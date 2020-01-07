@@ -1,14 +1,14 @@
-let event = document.getElementById('excuse');
+let onload = document.getElementById('excuse');
+let who = ['My mom', 'The teacher', 'The bus driver', 'My bestfriend']
+let what = ['eat', 'crushed', 'broked', 'pissed']
+let when = ['before the class','right in time','when I finished','during my lunch','while I was praying']
 
 
+function random_item(items)
+{
+return items[Math.floor(Math.random()*items.length)];
+}
 
-let who = ['the dog','my granma','his turtle','my bird'];
-let what = ['eat','pissed','crushed','broked'];
-let when = ['before the class','right in time','when I finished','during my lunch','while I was praying'];
 
-
-var a = Math.floor(Math.random()* who.length)
-
-var sentence = who[a]+" " + what[a]+" " + when[a];
-
-event.innerHTML = sentence;
+var resultado = (random_item(who) + ' '+ random_item(what) + ' ' +random_item(when));
+onload.innerHTML = resultado;
